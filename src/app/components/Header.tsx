@@ -35,7 +35,7 @@ export const Header = () => {
     }
   }, [])
   return (
-    <header className="flex h-[80px] w-full items-center border-b-2 border-solid border-[#E4E4E4] pl-5 pr-[25px]">
+    <header className="flex h-[80px] w-full items-center border-b-2 border-solid border-card-border pl-5 pr-[25px]">
       <Image src={logoWoodies} width={35} height={35} alt="Logo" />
       <div className=" ml-[19px] flex w-full items-center justify-between text-xl">
         <div className="flex w-[477px] items-center justify-between">
@@ -61,7 +61,7 @@ export const Header = () => {
         <div className="flex w-[244px] items-center justify-between">
           <Button
             variant="outline"
-            className="flex items-center px-[12px] text-xl leading-3"
+            className="flex h-[44px] items-center px-[12px] text-xl leading-3"
             size="active"
           >
             <User2 size={20} className="mr-[4px]" />

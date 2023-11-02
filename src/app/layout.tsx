@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${cherry.variable}`}>
+      <body className={`${cherry.variable} text-text-main`}>
         <Header />
         {children}
         <Footer />

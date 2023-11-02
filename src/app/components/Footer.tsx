@@ -24,7 +24,7 @@ const valueLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="flex h-[60px] items-center justify-between border-t-2 border-solid border-[#E4E4E4] px-[75px]">
+    <footer className="flex h-[60px] items-center justify-between border-t-2 border-solid border-card-border px-[75px]">
       <div className="flex flex-col justify-center">
         <span className="text-xs font-normal leading-[8px]">Powered by</span>
         <p className="font-cherry text-[35px] leading-[24px] text-primary">
