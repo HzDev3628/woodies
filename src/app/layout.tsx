@@ -3,6 +3,8 @@ import './global.css'
 import type { Metadata } from 'next'
 import { Cherry_Bomb_One } from 'next/font/google'
 
+import Web3ProviderSolana from '@/lib/providers/Web3ProvidersSolana'
+
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 
@@ -26,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${cherry.variable} text-text-main`}>
-        <Header />
-        {children}
-        <Footer />
+        <Web3ProviderSolana>
+          <Header />
+          {children}
+          <Footer />
+        </Web3ProviderSolana>
       </body>
     </html>
   )

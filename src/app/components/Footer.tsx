@@ -1,22 +1,22 @@
 import Image from 'next/image'
 
-import discordImage from '@/../public/footer/discord.svg'
-import whitepaperImage from '@/../public/footer/paper.svg'
-import twitterImage from '@/../public/footer/twitter_x.svg'
+import DiscordImage from '../../../public/footer/discord.svg'
+import WhitepaperImage from '../../../public/footer/paper.svg'
+import TwitterImage from '../../../public/footer/twitter_x.svg'
 
 const valueLinks = [
   {
-    image: whitepaperImage,
+    image: WhitepaperImage,
     alt: 'Whitepaper',
     href: 'https://woodies.gitbook.io/woodies/'
   },
   {
-    image: twitterImage,
+    image: TwitterImage,
     alt: 'Twitter',
     href: '#'
   },
   {
-    image: discordImage,
+    image: DiscordImage,
     alt: 'Discord',
     href: 'https://discord.gg/YMfydA6kTG'
   }
@@ -24,7 +24,7 @@ const valueLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="flex h-[60px] items-center justify-between border-t-2 border-solid border-card-border px-[75px]">
+    <footer className="flex h-[59px] items-center justify-between border-t-2 border-solid border-card-border px-[75px]">
       <div className="flex flex-col justify-center">
         <span className="text-xs font-normal leading-[8px]">Powered by</span>
         <p className="font-cherry text-[35px] leading-[24px] text-primary">
