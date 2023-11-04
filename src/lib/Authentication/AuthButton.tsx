@@ -16,10 +16,10 @@ import UserImage from '../../../public/logo.svg'
 
 export const AuthButton = ({
   session,
-  handleSignIn
+  onConnect
 }: {
   session: Session | null
-  handleSignIn: () => Promise<void>
+  onConnect: () => Promise<void>
 }) => {
   const [isActiveMenu, setIsActiveMenu] = useState(false)
   const user = session?.user
@@ -31,7 +31,7 @@ export const AuthButton = ({
     <>
       {!session && (
         <Button
-          onClick={handleSignIn}
+          onClick={onConnect}
           variant="outline"
           className="flex h-[44px] w-[198px] items-center justify-center leading-3"
           size="active"
@@ -82,9 +82,7 @@ export const AuthButton = ({
                   Profile
                 </Button>
                 <Link
-                  href="/api/auth/logout"
-                  onClick={(e) => {
-                    e.preventDefault()
+                  onClick={() => {
                     signOut()
                   }}
                 >

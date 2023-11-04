@@ -2,51 +2,49 @@ import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { getCsrfToken } from 'next-auth/react'
 
-import { getURL } from '@/lib/hooks/getURL'
-import { SigninMessage } from '@/lib/SigninMessage'
+import { Signature } from '@/lib/utils/Signature'
 
 const providers = [
   CredentialsProvider({
-    name: 'Solana',
+    name: 'web3-auth',
     credentials: {
-      message: {
-        label: 'Message',
-        type: 'text'
-      },
       signature: {
         label: 'Signature',
+        type: 'text'
+      },
+      message: {
+        label: 'Message',
         type: 'text'
       }
     },
     async authorize(credentials, req) {
-      try {
-        const signinMessage = new SigninMessage(
-          JSON.parse(credentials?.message || '{}')
-        )
-        const nextAuthUrl = new URL(getURL())
-        if (signinMessage.domain !== nextAuthUrl.host) {
-          return null
-        }
+      const { publicKey, host } = JSON.parse(credentials?.message || '{}')
 
-        const csrfToken = await getCsrfToken({ req: { ...req, body: null } })
+      const nextAuthUrl = new URL(process.env.NEXT_PUBLIC_VERCEL_URL || '')
 
-        if (!csrfToken) {
-          return null
-        }
-
-        const validationResult = await signinMessage.validate(
-          credentials?.signature || ''
-        )
-
-        if (!validationResult)
-          throw new Error('Could not validate the signed message')
-
-        return {
-          id: signinMessage.publicKey
-        }
-      } catch (e) {
+      if (host !== nextAuthUrl.host) {
         return null
       }
+      const crsf = await getCsrfToken({ req: { ...req, body: null } })
+
+      if (!crsf) {
+        return null
+      }
+      const nonceUnit8 = Signature.create(crsf)
+
+      const isValidate = await Signature.validate(
+        {
+          signature: credentials?.signature || '',
+          publicKey
+        },
+        nonceUnit8
+      )
+
+      if (!isValidate) {
+        throw new Error('Could not validate the signed message')
+      }
+
+      return { id: publicKey }
     }
   })
 ]

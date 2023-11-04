@@ -1,51 +1,47 @@
 'use client'
-import { useWallet } from '@solana/wallet-adapter-react'
-import { useWalletModal } from '@solana/wallet-adapter-react-ui'
 import base58 from 'bs58'
 import { getCsrfToken, signIn, useSession } from 'next-auth/react'
 
-import { SigninMessage } from '../SigninMessage'
+import { getProvider } from '../utils/getProvider'
+import { Signature } from '../utils/Signature'
 import { AuthButton } from './AuthButton'
 
 export const Authentication = () => {
   const { data: session } = useSession()
-
-  const wallet = useWallet()
-  const walletModal = useWalletModal()
-
-  const handleSignIn = async () => {
+  const onConnect = async () => {
     try {
-      if (!wallet.connected) {
-        walletModal.setVisible(true)
+      const provider = getProvider()
+
+      if (!provider) {
+        window.open('https://phantom.app/', '_blank')
       }
 
+      const resp = await provider.connect()
+      console.log('Connect', resp.publicKey.toString())
       const csrf = await getCsrfToken()
-      if (!wallet.publicKey || !csrf || !wallet.signMessage) return
-
-      const message = new SigninMessage({
-        domain: window.location.host,
-        publicKey: wallet.publicKey?.toBase58(),
-        statement: `Sign this message to sign in to the app.`,
-        nonce: csrf
-      })
-
-      const data = new TextEncoder().encode(message.prepare())
-      const signature = await wallet.signMessage(data)
-      const serializedSignature = base58.encode(signature)
-
-      const response = await signIn('credentials', {
-        message: JSON.stringify(message),
-        redirect: false,
-        signature: serializedSignature
-      })
-      if (response?.error) {
-        console.log('Error occured:', response.error)
-        return
+      if (resp && csrf) {
+        const noneUnit8 = Signature.create(csrf)
+        const { signature } = await provider.signMessage(noneUnit8)
+        const serializedSignature = base58.encode(signature)
+        const message = {
+          host: window.location.host,
+          publicKey: resp.publicKey.toString(),
+          nonce: csrf
+        }
+        const response = await signIn('credentials', {
+          message: JSON.stringify(message),
+          signature: serializedSignature,
+          redirect: false
+        })
+        if (response?.error) {
+          console.log('Error occured:', response.error)
+          return
+        }
       } else {
         console.log('Could not connect to wallet')
       }
     } catch (error) {
-      console.log(error)
+      console.error(error)
     }
   }
 
@@ -55,5 +51,5 @@ export const Authentication = () => {
   //   }
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [wallet.connected])
-  return <AuthButton session={session} handleSignIn={handleSignIn} />
+  return <AuthButton session={session} onConnect={onConnect} />
 }
