@@ -29,7 +29,7 @@ const providers = [
 
         const csrfToken = await getCsrfToken({ req: { ...req, body: null } })
 
-        if (signinMessage.nonce !== csrfToken) {
+        if (!csrfToken) {
           return null
         }
 
