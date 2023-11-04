@@ -1,6 +1,5 @@
 import { ChevronDown, LogOut, User2 } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import type { Session } from 'next-auth'
 import { signOut } from 'next-auth/react'
 import { useState } from 'react'
