@@ -34,21 +34,27 @@ export const Authentication = () => {
       const signature = await wallet.signMessage(data)
       const serializedSignature = base58.encode(signature)
 
-      signIn('credentials', {
+      const response = await signIn('credentials', {
         message: JSON.stringify(message),
         redirect: false,
         signature: serializedSignature
       })
+      if (response?.error) {
+        console.log('Error occured:', response.error)
+        return
+      } else {
+        console.log('Could not connect to wallet')
+      }
     } catch (error) {
       console.log(error)
     }
   }
 
-  useEffect(() => {
-    if (wallet.connected && status === 'unauthenticated') {
-      handleSignIn()
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [wallet.connected])
+  // useEffect(() => {
+  //   if (wallet.connected && status === 'unauthenticated') {
+  //     handleSignIn()
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [wallet.connected])
   return <AuthButton session={session} handleSignIn={handleSignIn} />
 }
