@@ -81,20 +81,18 @@ export const AuthButton = ({
                   <User2 size={14} className="mr-[12px]" />
                   Profile
                 </Button>
-                <Link
+
+                <Button
+                  variant="ghost"
+                  className="text-lg hover:text-text-hover"
+                  size="ghost"
                   onClick={() => {
                     signOut()
                   }}
                 >
-                  <Button
-                    variant="ghost"
-                    className="text-lg hover:text-text-hover"
-                    size="ghost"
-                  >
-                    <LogOut size={14} className="mr-[12px]" />
-                    Disconnect
-                  </Button>
-                </Link>
+                  <LogOut size={14} className="mr-[12px]" />
+                  Disconnect
+                </Button>
               </div>
             </div>
           </DropdownMenuContent>
