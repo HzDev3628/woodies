@@ -22,9 +22,8 @@ const providers = [
         const signinMessage = new SigninMessage(
           JSON.parse(credentials?.message || '{}')
         )
-        const nextAuthUrl = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-
-        if (signinMessage.domain !== nextAuthUrl) {
+        const nextAuthUrl = new URL(process.env.NEXTAUTH_URL || '')
+        if (signinMessage.domain !== nextAuthUrl.host) {
           return null
         }
 
