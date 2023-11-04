@@ -2,6 +2,7 @@ import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { getCsrfToken } from 'next-auth/react'
 
+import { getURL } from '@/lib/hooks/getURL'
 import { SigninMessage } from '@/lib/SigninMessage'
 
 const providers = [
@@ -22,7 +23,7 @@ const providers = [
         const signinMessage = new SigninMessage(
           JSON.parse(credentials?.message || '{}')
         )
-        const nextAuthUrl = new URL(process.env.NEXTAUTH_URL || '')
+        const nextAuthUrl = new URL(getURL())
         if (signinMessage.domain !== nextAuthUrl.host) {
           return null
         }
