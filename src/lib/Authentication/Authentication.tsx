@@ -3,13 +3,12 @@ import { useWallet } from '@solana/wallet-adapter-react'
 import { useWalletModal } from '@solana/wallet-adapter-react-ui'
 import base58 from 'bs58'
 import { getCsrfToken, signIn, useSession } from 'next-auth/react'
-import { useEffect } from 'react'
 
 import { SigninMessage } from '../SigninMessage'
 import { AuthButton } from './AuthButton'
 
 export const Authentication = () => {
-  const { data: session, status } = useSession()
+  const { data: session } = useSession()
 
   const wallet = useWallet()
   const walletModal = useWalletModal()
