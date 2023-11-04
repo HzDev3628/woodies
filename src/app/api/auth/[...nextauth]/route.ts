@@ -22,8 +22,8 @@ const providers = [
         const signinMessage = new SigninMessage(
           JSON.parse(credentials?.message || '{}')
         )
-        const nextAuthUrl = new URL(process.env.NEXTAUTH_URL || '')
-        if (signinMessage.domain !== nextAuthUrl.host) {
+        const nextAuthUrl = process.env.NEXTAUTH_URL
+        if (signinMessage.domain !== nextAuthUrl) {
           return null
         }
 
