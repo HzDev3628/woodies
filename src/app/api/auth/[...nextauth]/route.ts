@@ -26,12 +26,12 @@ const providers = [
       if (host !== nextAuthUrl.host) {
         return null
       }
-      const crsf = await getCsrfToken({ req: { ...req, body: null } })
+      const csrfToken = await getCsrfToken({ req: { ...req, body: null } })
 
-      if (!crsf) {
+      if (!csrfToken) {
         return null
       }
-      const nonceUnit8 = Signature.create(crsf)
+      const nonceUnit8 = Signature.create(csrfToken)
 
       const isValidate = await Signature.validate(
         {
