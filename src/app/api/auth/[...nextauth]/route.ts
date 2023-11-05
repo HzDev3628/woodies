@@ -21,7 +21,9 @@ const providers = [
     async authorize(credentials, req) {
       const { publicKey, host } = JSON.parse(credentials?.message || '{}')
 
-      const nextAuthUrl = new URL(getURL() || '')
+      const nextAuthUrl = getURL()
+      console.log(nextAuthUrl)
+      console.log(nextAuthUrl)
 
       if (host !== nextAuthUrl.host) {
         return null

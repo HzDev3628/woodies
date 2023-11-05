@@ -1,7 +1,7 @@
+'use client'
 import { ChevronDown, LogOut, User2 } from 'lucide-react'
 import Image from 'next/image'
-import type { Session } from 'next-auth'
-import { signOut } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
@@ -14,12 +14,11 @@ import {
 import UserImage from '../../../public/logo.svg'
 
 export const AuthButton = ({
-  session,
   onConnect
 }: {
-  session: Session | null
   onConnect: () => Promise<void>
 }) => {
+  const { data: session } = useSession()
   const [isActiveMenu, setIsActiveMenu] = useState(false)
   const user = session?.user
   const ViewAddress = `${user?.name?.slice(0, 4)}...${user?.name?.slice(
@@ -30,7 +29,7 @@ export const AuthButton = ({
     <>
       {!session && (
         <Button
-          onClick={onConnect}
+          onClick={() => onConnect()}
           variant="outline"
           className="flex h-[44px] w-[198px] items-center justify-center leading-3"
           size="active"

@@ -1,13 +1,12 @@
 'use client'
 import base58 from 'bs58'
-import { getCsrfToken, signIn, useSession } from 'next-auth/react'
+import { getCsrfToken, signIn } from 'next-auth/react'
 
 import { getProvider } from '../hooks/getProvider'
 import { AuthButton } from './AuthButton'
 import { Signature } from './Signature'
 
 export const Authentication = () => {
-  const { data: session } = useSession()
   const onConnect = async () => {
     try {
       const provider = getProvider()
@@ -44,5 +43,5 @@ export const Authentication = () => {
       console.error(error)
     }
   }
-  return <AuthButton session={session} onConnect={onConnect} />
+  return <AuthButton onConnect={onConnect} />
 }
