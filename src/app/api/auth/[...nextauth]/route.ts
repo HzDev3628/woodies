@@ -25,7 +25,7 @@ const providers = [
       console.log(nextAuthUrl)
       console.log(nextAuthUrl)
 
-      if (host !== nextAuthUrl.host) {
+      if (host !== nextAuthUrl) {
         return null
       }
       const crsf = await getCsrfToken({ req: { ...req, body: null } })
