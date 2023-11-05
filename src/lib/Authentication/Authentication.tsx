@@ -32,7 +32,7 @@ export const Authentication = () => {
           message: JSON.stringify(message),
           signature: serializedSignature,
           redirect: false
-        })
+        }).then((res: any) => res.json())
         if (response?.error) {
           console.log('Error occured:', response.error)
           return
