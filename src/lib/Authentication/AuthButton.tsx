@@ -1,6 +1,5 @@
 import { ChevronDown, LogOut, User2 } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import type { Session } from 'next-auth'
 import { signOut } from 'next-auth/react'
 import { useState } from 'react'
@@ -16,10 +15,10 @@ import UserImage from '../../../public/logo.svg'
 
 export const AuthButton = ({
   session,
-  handleSignIn
+  onConnect
 }: {
   session: Session | null
-  handleSignIn: () => Promise<void>
+  onConnect: () => Promise<void>
 }) => {
   const [isActiveMenu, setIsActiveMenu] = useState(false)
   const user = session?.user
@@ -31,7 +30,7 @@ export const AuthButton = ({
     <>
       {!session && (
         <Button
-          onClick={handleSignIn}
+          onClick={onConnect}
           variant="outline"
           className="flex h-[44px] w-[198px] items-center justify-center leading-3"
           size="active"
@@ -81,22 +80,15 @@ export const AuthButton = ({
                   <User2 size={14} className="mr-[12px]" />
                   Profile
                 </Button>
-                <Link
-                  href="/api/auth/logout"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    signOut()
-                  }}
+                <Button
+                  variant="ghost"
+                  className="text-lg hover:text-text-hover"
+                  size="ghost"
+                  onClick={() => signOut()}
                 >
-                  <Button
-                    variant="ghost"
-                    className="text-lg hover:text-text-hover"
-                    size="ghost"
-                  >
-                    <LogOut size={14} className="mr-[12px]" />
-                    Disconnect
-                  </Button>
-                </Link>
+                  <LogOut size={14} className="mr-[12px]" />
+                  Disconnect
+                </Button>
               </div>
             </div>
           </DropdownMenuContent>
