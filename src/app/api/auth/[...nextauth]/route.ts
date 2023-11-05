@@ -2,6 +2,7 @@ import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { getCsrfToken } from 'next-auth/react'
 
+import { getURL } from '@/lib/hooks/getURL'
 import { Signature } from '@/lib/utils/Signature'
 
 const providers = [
@@ -20,7 +21,7 @@ const providers = [
     async authorize(credentials, req) {
       const { publicKey, host } = JSON.parse(credentials?.message || '{}')
 
-      const nextAuthUrl = new URL(process.env.NEXT_PUBLIC_VERCEL_URL || '')
+      const nextAuthUrl = new URL(getURL() || '')
 
       if (host !== nextAuthUrl.host) {
         return null
