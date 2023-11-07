@@ -43,9 +43,9 @@ export const AuthButton = ({
           <DropdownMenuTrigger className="outline-none">
             <Button
               variant="outline"
-              className={`flex h-[44px] w-[198px] items-center justify-between border-2 text-xl leading-3 ${
+              className={`flex h-[44px] w-[198px] items-center justify-between border text-xl leading-3 dark:border-title-text dark:hover:border-border-hover ${
                 isActiveMenu
-                  ? 'border-green-border bg-green-light text-text-button'
+                  ? 'border-green-border bg-green-light text-text-button dark:border-none dark:bg-green-main dark:text-background'
                   : ''
               } `}
               size="active"
@@ -58,7 +58,7 @@ export const AuthButton = ({
               />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="mt-[14px] h-[170px] w-[198px] rounded-none rounded-b-2xl bg-background shadow-lg">
+          <DropdownMenuContent className="mt-[14px] h-[170px] w-[198px] rounded-none rounded-b-2xl bg-background shadow-lg dark:border-card-border">
             <div className="flex flex-col text-text-main">
               <div className="ml-4 mt-[15px] flex items-center text-lg hover:text-text-hover">
                 <Image
@@ -66,7 +66,7 @@ export const AuthButton = ({
                   width={42}
                   height={42}
                   alt="user image"
-                  className="border-e-full mr-[10px]"
+                  className="border-e-full mr-[10px] rounded-full"
                 />
                 {ViewAddress}
               </div>

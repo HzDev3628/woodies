@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 
-const ButtonHeader = [
+const BUTTONHEADER = [
   {
     label: 'Home',
     href: '/'
@@ -26,12 +26,17 @@ const ButtonHeader = [
 
 export const NavigationButton = () => {
   const { pages } = useParams()
-  const [activePage, setActivePage] = useState(
-    ButtonHeader.findIndex(({ href }) => href.substring(1) === pages)
+  const initialActivePage = BUTTONHEADER.findIndex(
+    ({ href }) => href.substring(1) === pages
   )
+
+  const [activePage, setActivePage] = useState(
+    initialActivePage !== -1 ? initialActivePage : 0
+  )
+
   return (
     <>
-      {ButtonHeader.map(({ label, href }, index) => (
+      {BUTTONHEADER.map(({ label, href }, index) => (
         <Link
           key={index}
           href={href}
@@ -42,7 +47,11 @@ export const NavigationButton = () => {
           <Button
             variant={activePage == index ? 'active' : 'ghost'}
             size="active"
-            className="text-xl"
+            className={`text-xl ${
+              activePage == index
+                ? 'dark:text-background'
+                : 'dark:text-text-main dark:hover:text-title-text'
+            }`}
           >
             <span className="leading-3">{label}</span>
           </Button>

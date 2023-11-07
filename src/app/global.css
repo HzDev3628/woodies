@@ -56,7 +56,7 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 0 0% 4%; /* #0B0B0B */
     --foreground: 0 0% 98%;
 
     --card: 240 10% 3.9%;
@@ -83,6 +83,17 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+
+    /* Custom  */
+    --text-main: 0 0% 36%; /*#5C5C5C*/
+    --text-hover:  0 0% 45%;  /*#454545*/
+    --title-text: 0 0% 45%; /* #737373 */
+    --border-hover: 0 0% 63%; /* #A1A1A1 */
+
+    --green-main: 100 55% 39%; /* #519A2D */
+    --green-border: 100 55% 39%; /* #519A2D */
+    
+    --card-border: 0 0% 20%; /* #333 */
   }
 }
 
