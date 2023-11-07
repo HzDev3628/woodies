@@ -1,23 +1,20 @@
 'use client'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export const ThemeButton = () => {
-  const [isStateTheme, setIsStateTheme] = useState<string>()
-  const { setTheme } = useTheme()
-
-  useEffect(() => {
-    const stateTheme = localStorage.getItem('theme')
-    if (stateTheme) setIsStateTheme(stateTheme)
-  }, [])
+  const { setTheme, resolvedTheme } = useTheme()
+  const [isStateTheme, setIsStateTheme] = useState<string>(
+    resolvedTheme ?? 'light'
+  )
 
   const toggleTheme = () => {
-    if (isStateTheme === 'dark') {
+    if (resolvedTheme === 'dark') {
       setTheme('light')
       setIsStateTheme('light')
     }
-    if (isStateTheme === 'light') {
+    if (resolvedTheme === 'light') {
       setTheme('dark')
       setIsStateTheme('dark')
     }
