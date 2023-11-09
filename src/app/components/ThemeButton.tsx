@@ -21,7 +21,7 @@ export const ThemeButton = () => {
   }
   return (
     <button
-      className="ml-[20px] hover:text-text-hover"
+      className="hover:text-hover-text ml-[20px]"
       onClick={() => toggleTheme()}
     >
       {isStateTheme === 'light' ? <Sun size={30} /> : <Moon size={30} />}

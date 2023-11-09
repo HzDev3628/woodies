@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${cherry.variable} text-text-main`}>
+      <body className={`${cherry.variable} text-main-text`}>
         <Web3ProviderSolana>
           <ProviderTheme>
             <Header />

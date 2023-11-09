@@ -36,23 +36,23 @@
     --radius: 0.5rem;
 
     /* Custom */
-    --green-main: 105 55% 58%; /*#78CF5B*/
-    --green-light: 105 54% 67%; /*#96D97F*/
+    --main-green: 105 55% 58%;
+    --light-green: 105 54% 67%;
 
-    --grey-card: 0 0% 97%; /*#F7F7F7*/
-    --grey-lines: 0 0% 95%; /*#F2F2F2*/
-    --grey-basic: 0 0% 89%; /*#E4E4E4*/
+    --main-text: 0 0% 45%;
+    --hover-text: 0 0% 27%;
+    --title-text: 0 0% 36%;
+    --text-button-green: 0 0% 100%;
 
-    --text-main: 0 0% 45%; /*#737373*/ 
-    --text-hover: 0 0% 27%; /*#454545*/
-    --text-button: 0 0% 100%; /*#FFFFFF*/
-    --text-light: 0 0% 63%; /*#A1A1A1*/
-    --title-text: 0 0% 36%; /*#5C5C5C*/
+    --card: 0 0% 97%;
+    --lines: 0 0% 89%;
+    --info-card: 0 0% 91%;
     
-    --main-border: 0 0% 63%; /*#A1A1A1*/
-    --border-hover: 0 0% 45%; /*#737373*/
-    --card-border: 0 0% 89%; /*#E4E4E4*/
-    --green-border: 105 55% 58%; /*#78CF5B*/
+    --main-border: 0 0% 63%;
+    --hover-border: 0 0% 45%;
+    --card-border: 0 0% 89%;
+    
+    --warning: 47 94% 65%;
   }
 
   .dark {
@@ -85,15 +85,23 @@
     --ring: 240 4.9% 83.9%;
 
     /* Custom  */
-    --text-main: 0 0% 36%; /*#5C5C5C*/
-    --text-hover:  0 0% 45%;  /*#454545*/
-    --title-text: 0 0% 45%; /* #737373 */
-    --border-hover: 0 0% 63%; /* #A1A1A1 */
-
-    --green-main: 100 55% 39%; /* #519A2D */
-    --green-border: 100 55% 39%; /* #519A2D */
+    --main-green: 105 55% 58%;
+    --light-green: 100 55% 39%;
     
-    --card-border: 0 0% 20%; /* #333 */
+    --main-text: 0 0% 36%;
+    --hover-text: 0 0% 45%;
+    --title-text: 0 0% 45%;
+    --text-button-green: 0 0% 4%;
+
+    --card: 0 0% 9%;
+    --lines: 0 0% 20%;
+    --info-card: 0 0% 12%;
+    
+    --card-border: 0 0% 20%;
+    --main-border: 0 0% 45%;
+    --hover-border: 0 0% 63%;
+
+    --warning: 47 51% 46%;
   }
 }
 

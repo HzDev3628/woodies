@@ -54,20 +54,19 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
 
-        "green-main": "hsl(var(--green-main))",
-        "green-light": "hsl(var(--green-light))",
-        "grey-card": "hsl(var(--grey-card))",
-        "grey-lines": "hsl(var(--grey-lines))",
-        "grey-basic": "hsl(var(--grey-basic))",
-        "text-main": "hsl(var(--text-main))",
-        "text-hover": "hsl(var(--text-hover))",
-        "text-button": "hsl(var(--text-button))",
-        "text-light": "hsl(var(--text-light))",
+        "main-green": "hsl(var(--main-green))",
+        "light-green": "hsl(var(--light-green))",
+        "card": "hsl(var(--card))",
+        "lines": "hsl(var(--lines))",
+        "info-card": "hsl(var(--info-card))",
+        "main-text": "hsl(var(--main-text))",
+        "hover-text": "hsl(var(--hover-text))",
+        "text-button-green": "hsl(var(--text-button-green))",
         "title-text": "hsl(var(--title-text))",
         "main-border": "hsl(var(--main-border))",
-        "border-hover": "hsl(var(--border-hover))",
+        "hover-border": "hsl(var(--hover-border))",
         "card-border": "hsl(var(--card-border))",
-        "green-border": "hsl(var(--green-border))",
+        warning: "hsl(var(--warning))"
       },
       borderRadius: {
         xl: "calc(var(--radius) + 2px)",
@@ -84,8 +83,20 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "chevron-active": {
+          '0%': {transform: 'rotate(0deg)'},
+          '50%': {transform: 'rotate(-90deg)'},
+          '100%': {transform: 'rotate(-180deg)'}
+        },
+        "chevron-disabled": {
+          '0%': {transform: 'rotate(-180deg)'},
+          '50%': {transform: 'rotate(-90deg)'},
+          '100%': {transform: 'rotate(0deg)'}
+        },
       },
       animation: {
+        "chevron-active": "chevron-active 0.2s ease-out",
+        "chevron-disabled": "chevron-disabled 0.2s ease-out",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

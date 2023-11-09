@@ -10,14 +10,11 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
+import { onConnect } from '@/lib/Authentication/Authentication'
 
-import UserImage from '../../../public/logo.svg'
+import UserImage from '../../../public/logo.png'
 
-export const AuthButton = ({
-  onConnect
-}: {
-  onConnect: () => Promise<void>
-}) => {
+export const AuthButton = () => {
   const { data: session } = useSession()
   const [isActiveMenu, setIsActiveMenu] = useState(false)
   const user = session?.user
@@ -43,24 +40,26 @@ export const AuthButton = ({
           <DropdownMenuTrigger className="outline-none">
             <Button
               variant="outline"
-              className={`flex h-[44px] w-[198px] items-center justify-between border text-xl leading-3 dark:border-title-text dark:hover:border-border-hover ${
-                isActiveMenu
-                  ? 'border-green-border bg-green-light text-text-button dark:border-none dark:bg-green-main dark:text-background'
-                  : ''
+              className={`flex h-[44px] items-center justify-between gap-2 border px-6 text-xl leading-3 ${
+                isActiveMenu ? 'bg-light-green text-text-button-green' : ''
               } `}
               size="active"
             >
               <span className="mt-[3px] leading-3">{ViewAddress}</span>
               <ChevronDown
-                size={28}
+                size={29}
                 fontWeight={800}
-                className={isActiveMenu ? 'rotate-180' : ''}
+                className={`${
+                  isActiveMenu
+                    ? 'rotate-180 animate-chevron-active'
+                    : 'rotate-0 animate-chevron-disabled'
+                }`}
               />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="mt-[14px] h-[170px] w-[198px] rounded-none rounded-b-2xl bg-background shadow-lg dark:border-card-border">
-            <div className="flex flex-col text-text-main">
-              <div className="ml-4 mt-[15px] flex items-center text-lg hover:text-text-hover">
+          <DropdownMenuContent className="border-lines mt-[14px] h-[170px] w-[206px] rounded-none rounded-b-2xl bg-background shadow-lg">
+            <div className="text-main-text flex flex-col">
+              <div className="hover:text-hover-text ml-4 mt-[15px] flex items-center text-lg">
                 <Image
                   src={UserImage}
                   width={42}
@@ -73,7 +72,7 @@ export const AuthButton = ({
               <div className="h-full w-full pl-[20px] pt-[16px]">
                 <Button
                   variant="ghost"
-                  className="mb-[12px] text-lg hover:text-text-hover"
+                  className="mb-[12px] text-lg "
                   size="ghost"
                 >
                   <User2 size={14} className="mr-[12px]" />
@@ -81,7 +80,7 @@ export const AuthButton = ({
                 </Button>
                 <Button
                   variant="ghost"
-                  className="text-lg hover:text-text-hover"
+                  className="text-lg"
                   size="ghost"
                   onClick={() => signOut()}
                 >

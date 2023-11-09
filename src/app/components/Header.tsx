@@ -1,14 +1,13 @@
 import Image from 'next/image'
 
-import { Authentication } from '@/lib/Authentication/Authentication'
-
-import logoWoodies from '../../../public/logo.svg'
+import logoWoodies from '../../../public/logo.png'
+import { AuthButton } from './AuthButton'
 import { NavigationButton } from './NavigationButton'
 import { ThemeButton } from './ThemeButton'
 
 export const Header = () => {
   return (
-    <header className="flex h-[80px] w-full items-center border-b-2 border-solid border-card-border pl-5 pr-[25px]">
+    <header className="border-lines flex h-[80px] w-full items-center border-b-2 border-solid pl-5 pr-[25px]">
       <Image
         className="rounded-full"
         src={logoWoodies}
@@ -21,7 +20,7 @@ export const Header = () => {
           <NavigationButton />
         </div>
         <div className="flex w-auto items-center justify-between">
-          <Authentication />
+          <AuthButton />
           <ThemeButton />
         </div>
       </div>

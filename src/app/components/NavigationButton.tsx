@@ -48,9 +48,7 @@ export const NavigationButton = () => {
             variant={activePage == index ? 'active' : 'ghost'}
             size="active"
             className={`text-xl ${
-              activePage == index
-                ? 'dark:text-background'
-                : 'dark:text-text-main dark:hover:text-title-text'
+              activePage == index ? 'text-text-button-green' : ''
             }`}
           >
             <span className="leading-3">{label}</span>
