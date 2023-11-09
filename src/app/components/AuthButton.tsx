@@ -57,9 +57,9 @@ export const AuthButton = () => {
               />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="border-lines mt-[14px] h-[170px] w-[206px] rounded-none rounded-b-2xl bg-background shadow-lg">
-            <div className="text-main-text flex flex-col">
-              <div className="hover:text-hover-text ml-4 mt-[15px] flex items-center text-lg">
+          <DropdownMenuContent className="mt-[14px] h-[170px] w-[206px] rounded-none rounded-b-2xl border-lines bg-background shadow-lg">
+            <div className="flex flex-col text-main-text">
+              <div className="ml-4 mt-[15px] flex items-center text-lg hover:text-hover-text">
                 <Image
                   src={UserImage}
                   width={42}

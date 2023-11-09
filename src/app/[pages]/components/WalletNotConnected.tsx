@@ -19,7 +19,7 @@ export const WalletNotConnected = () => {
         onClick={() => onConnect()}
         variant="active"
         size="active"
-        className="text-text-button-green hover:bg-main-green m-auto text-xl leading-none transition-colors duration-200"
+        className="m-auto text-xl leading-none text-text-button-green transition-colors duration-200 hover:bg-main-green"
       >
         Connect Wallet
       </Button>

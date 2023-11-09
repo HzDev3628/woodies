@@ -7,7 +7,7 @@ import { ThemeButton } from './ThemeButton'
 
 export const Header = () => {
   return (
-    <header className="border-lines flex h-[80px] w-full items-center border-b-2 border-solid pl-5 pr-[25px]">
+    <header className="flex h-[80px] w-full items-center border-b-2 border-solid border-lines pl-5 pr-[25px]">
       <Image
         className="rounded-full"
         src={logoWoodies}

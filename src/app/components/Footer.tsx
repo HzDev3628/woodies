@@ -24,7 +24,7 @@ const VALUELINKS = [
 
 export const Footer = () => {
   return (
-    <footer className="border-lines flex h-[59px] items-center justify-between border-t-2 border-solid px-[75px]">
+    <footer className="flex h-[59px] items-center justify-between border-t-2 border-solid border-lines px-[75px]">
       <div className="flex flex-col justify-center">
         <span className="text-xs font-normal leading-[8px]">Powered by</span>
         <p className="font-cherry text-[35px] leading-[24px]">Woodies</p>
