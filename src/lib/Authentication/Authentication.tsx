@@ -28,7 +28,8 @@ export const onConnect = async () => {
         message: JSON.stringify(message),
         signature: serializedSignature,
         redirect: false
-      }).then((res: any) => res.json())
+      })
+      console.log(response)
       if (response?.error) {
         console.log('Error occured:', response.error)
         return
