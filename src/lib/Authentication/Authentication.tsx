@@ -1,4 +1,3 @@
-'use client'
 import base58 from 'bs58'
 import { getCsrfToken, signIn } from 'next-auth/react'
 
