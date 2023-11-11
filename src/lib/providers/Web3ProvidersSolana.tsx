@@ -6,7 +6,6 @@ import {
 } from '@solana/wallet-adapter-react'
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
 import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets'
-import { clusterApiUrl } from '@solana/web3.js'
 import { SessionProvider } from 'next-auth/react'
 import React, { useMemo } from 'react'
 
@@ -18,9 +17,10 @@ require('@solana/wallet-adapter-react-ui/styles.css')
 
 export default function Web3ProviderSolana({ children }: AuthContextProps) {
   const network = WalletAdapterNetwork.Mainnet
-  const endpoint = useMemo(() => clusterApiUrl(network), [network])
+  const endpoint = `https://api.mainnet-beta.solana.com`
 
-  const wallets = useMemo(() => [new PhantomWalletAdapter()], [])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const wallets = useMemo(() => [new PhantomWalletAdapter()], [network])
 
   return (
     <ConnectionProvider endpoint={endpoint}>

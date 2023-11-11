@@ -24,6 +24,7 @@ export const onConnect = async () => {
         publicKey: resp.publicKey.toString(),
         nonce: csrf
       }
+      console.log(message)
       const response = await signIn('credentials', {
         message: JSON.stringify(message),
         signature: serializedSignature,
