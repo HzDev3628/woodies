@@ -20,10 +20,12 @@ export const authOptions: AuthOptions = {
         }
       },
       async authorize(credentials, req) {
-        const { publicKey, host } = JSON.parse(credentials?.message || '{}')
+        if (!credentials?.message) {
+          return null
+        }
+        const { publicKey, host } = JSON.parse(credentials?.message)
 
-        console.log(getURL())
-        const nextAuthUrl = new URL(getURL() || '')
+        const nextAuthUrl = new URL(getURL())
 
         if (host !== nextAuthUrl.host) {
           return null
@@ -37,7 +39,7 @@ export const authOptions: AuthOptions = {
 
         const isValidate = await Signature.validate(
           {
-            signature: credentials?.signature || '',
+            signature: credentials?.signature,
             publicKey
           },
           nonceUnit8
