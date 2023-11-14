@@ -8,7 +8,7 @@ import { getURL } from '@/lib/hooks/getURL'
 export const authOptions: AuthOptions = {
   providers: [
     CredentialsProvider({
-      name: 'web3-auth',
+      name: 'web3',
       credentials: {
         signature: {
           label: 'Signature',

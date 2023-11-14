@@ -23,12 +23,12 @@ export default function Web3ProviderSolana({ children }: AuthContextProps) {
   const wallets = useMemo(() => [new PhantomWalletAdapter()], [network])
 
   return (
-    <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
-        <WalletModalProvider>
-          <SessionProvider>{children}</SessionProvider>
-        </WalletModalProvider>
-      </WalletProvider>
-    </ConnectionProvider>
+    <SessionProvider>
+      <ConnectionProvider endpoint={endpoint}>
+        <WalletProvider wallets={wallets} autoConnect>
+          <WalletModalProvider>{children}</WalletModalProvider>
+        </WalletProvider>
+      </ConnectionProvider>
+    </SessionProvider>
   )
 }

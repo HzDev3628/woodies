@@ -1,7 +1,8 @@
 import { AlertCircle } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
-import { onConnect } from '@/lib/Authentication/Authentication'
+// import { Button } from '@/components/ui/button'
+// import { onConnect } from '@/lib/Authentication/Authentication'
+import { PhantomWallet } from '@/app/components/PhantomButton'
 
 export const WalletNotConnected = () => {
   return (
@@ -15,14 +16,15 @@ export const WalletNotConnected = () => {
           </span>
         </div>
       </div>
-      <Button
+      {/* <Button
         onClick={() => onConnect()}
         variant="active"
         size="active"
         className="m-auto text-xl leading-none text-text-button-green transition-colors duration-200 hover:bg-main-green"
       >
         Connect Wallet
-      </Button>
+      </Button> */}
+      <PhantomWallet />
     </div>
   )
 }
