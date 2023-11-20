@@ -13,7 +13,6 @@ export const onConnect = async () => {
     }
 
     const resp = await provider.connect()
-    console.log('Connect', resp.publicKey.toString())
     const csrf = await getCsrfToken()
     if (resp && csrf) {
       const noneUnit8 = Signature.create(csrf)
@@ -24,12 +23,12 @@ export const onConnect = async () => {
         publicKey: resp.publicKey.toString(),
         nonce: csrf
       }
+      console.log(JSON.stringify(message))
       const response = await signIn('credentials', {
         message: JSON.stringify(message),
         signature: serializedSignature,
         redirect: false
       })
-      console.log(response)
       if (response?.error) {
         console.log('Error occured:', response.error)
         return

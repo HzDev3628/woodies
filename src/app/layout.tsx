@@ -11,7 +11,7 @@ import { Header } from './components/Header'
 
 const cherry = Cherry_Bomb_One({
   weight: ['400'],
-  subsets: ['latin'],
+  subsets: ['vietnamese'],
   display: 'swap',
   variable: '--font-cherry'
 })
