@@ -16,9 +16,6 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        cherry: ['var(--font-cherry)']
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -52,21 +49,7 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
-
-        "main-green": "hsl(var(--main-green))",
-        "light-green": "hsl(var(--light-green))",
-        "card": "hsl(var(--card))",
-        "lines": "hsl(var(--lines))",
-        "info-card": "hsl(var(--info-card))",
-        "main-text": "hsl(var(--main-text))",
-        "hover-text": "hsl(var(--hover-text))",
-        "text-button-green": "hsl(var(--text-button-green))",
-        "title-text": "hsl(var(--title-text))",
-        "main-border": "hsl(var(--main-border))",
-        "hover-border": "hsl(var(--hover-border))",
-        "card-border": "hsl(var(--card-border))",
-        warning: "hsl(var(--warning))"
+        }
       },
       borderRadius: {
         xl: "calc(var(--radius) + 2px)",

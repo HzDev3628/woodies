@@ -1,20 +1,11 @@
-import './global.css'
+import './style/global.css'
 
 import type { Metadata } from 'next'
-import { Cherry_Bomb_One } from 'next/font/google'
 
-import { ProviderTheme } from '@/lib/providers/ProviderTheme'
 import Web3ProviderSolana from '@/lib/providers/Web3ProvidersSolana'
 
-import { Footer } from './components/Footer'
+// import { Footer } from './components/Footer'
 import { Header } from './components/Header'
-
-const cherry = Cherry_Bomb_One({
-  weight: ['400'],
-  subsets: ['vietnamese'],
-  display: 'swap',
-  variable: '--font-cherry'
-})
 
 export const metadata: Metadata = {
   title: 'Woodies',
@@ -28,13 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${cherry.variable} text-main-text`}>
+      <body className="text-white">
         <Web3ProviderSolana>
-          <ProviderTheme>
-            <Header />
-            {children}
-            <Footer />
-          </ProviderTheme>
+          <Header />
+          {children}
+          {/* <Footer /> */}
         </Web3ProviderSolana>
       </body>
     </html>

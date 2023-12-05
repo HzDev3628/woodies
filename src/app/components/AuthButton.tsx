@@ -29,7 +29,6 @@ export const AuthButton = () => {
           onClick={() => onConnect()}
           variant="outline"
           className="flex h-[44px] w-[198px] items-center justify-center leading-3"
-          size="active"
         >
           <User2 size={20} className="mr-[4px]" />
           <span className="mt-[3px] text-xl leading-3">Connect Wallet</span>
@@ -40,10 +39,7 @@ export const AuthButton = () => {
           <DropdownMenuTrigger className="outline-none">
             <Button
               variant="outline"
-              className={`flex h-[44px] items-center justify-between gap-2 border px-6 text-xl leading-3 ${
-                isActiveMenu ? 'bg-light-green text-text-button-green' : ''
-              } `}
-              size="active"
+              className="flex h-[44px] items-center justify-between gap-2 border px-6 text-xl leading-3"
             >
               <span className="mt-[3px] leading-3">{ViewAddress}</span>
               <ChevronDown
@@ -57,9 +53,9 @@ export const AuthButton = () => {
               />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="mt-[14px] h-[170px] w-[206px] rounded-none rounded-b-2xl border-lines bg-background shadow-lg">
-            <div className="flex flex-col text-main-text">
-              <div className="ml-4 mt-[15px] flex items-center text-lg hover:text-hover-text">
+          <DropdownMenuContent className="mt-[14px] h-[170px] w-[206px] rounded-none rounded-b-2xl bg-background shadow-lg">
+            <div className="flex flex-col">
+              <div className="ml-4 mt-[15px] flex items-center text-lg">
                 <Image
                   src={UserImage}
                   width={42}
@@ -70,18 +66,13 @@ export const AuthButton = () => {
                 {ViewAddress}
               </div>
               <div className="h-full w-full pl-[20px] pt-[16px]">
-                <Button
-                  variant="ghost"
-                  className="mb-[12px] text-lg "
-                  size="ghost"
-                >
+                <Button variant="ghost" className="mb-[12px] text-lg ">
                   <User2 size={14} className="mr-[12px]" />
                   Profile
                 </Button>
                 <Button
                   variant="ghost"
                   className="text-lg"
-                  size="ghost"
                   onClick={() => signOut()}
                 >
                   <LogOut size={14} className="mr-[12px]" />

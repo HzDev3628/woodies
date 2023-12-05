@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { useState } from 'react'
 
@@ -8,19 +7,23 @@ import { Button } from '@/components/ui/button'
 const BUTTONHEADER = [
   {
     label: 'Home',
-    href: '/'
+    href: '/',
+    disabled: false
   },
   {
     label: 'Staking',
-    href: '/staking'
+    href: '/staking',
+    disabled: true
   },
   {
     label: 'Wheelspins',
-    href: '/wheelspins'
+    href: '/wheelspins',
+    disabled: true
   },
   {
     label: 'Raid2Earn',
-    href: '/raid2earn'
+    href: '/raid2earn',
+    disabled: true
   }
 ]
 
@@ -36,24 +39,15 @@ export const NavigationButton = () => {
 
   return (
     <>
-      {BUTTONHEADER.map(({ label, href }, index) => (
-        <Link
+      {BUTTONHEADER.map(({ label, disabled }, index) => (
+        <Button
           key={index}
-          href={href}
-          onClick={() => {
-            setActivePage(index)
-          }}
+          disabled={disabled}
+          onClick={() => setActivePage(0)}
+          className={`text-xl ${activePage == index ? 'text-white' : ''}`}
         >
-          <Button
-            variant={activePage == index ? 'active' : 'ghost'}
-            size="active"
-            className={`text-xl ${
-              activePage == index ? 'text-text-button-green' : ''
-            }`}
-          >
-            <span className="leading-3">{label}</span>
-          </Button>
-        </Link>
+          <span className="leading-3">{label}</span>
+        </Button>
       ))}
     </>
   )
