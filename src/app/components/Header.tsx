@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import logoWoodies from '../../../public/logo.png'
-import { NavigationButton } from './NavigationButton'
+import { NavigationButton } from './navigation-button'
 
 export const Header = () => {
   return (

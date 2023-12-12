@@ -3,8 +3,8 @@ import './style/global.css'
 import type { Metadata } from 'next'
 import { Cherry_Bomb_One, Montserrat, Nunito } from 'next/font/google'
 
-import { Footer } from './components/Footer'
-import { Header } from './components/Header'
+import { Footer } from './components/footer'
+import { Header } from './components/header'
 
 export const metadata: Metadata = {
   title: 'Woodies',
@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`text-primary ${nunito.className} ${nunito.variable} ${montserrat.variable} ${cherry.variable}`}
+        className={`text-primary ${nunito.className} ${nunito.variable} ${montserrat.variable} ${cherry.variable} antialiased`}
       >
         <Header />
         {children}

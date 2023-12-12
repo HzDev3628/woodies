@@ -41,8 +41,8 @@ export const Footer = () => {
           <a key={index} href={href} target="_blank">
             <Image
               src={image}
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               alt={alt}
               className="transition-all duration-200 hover:invert-[.70]"
             />
