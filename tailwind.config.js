@@ -16,6 +16,11 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)'],
+        nunito: ['var(--font-nunito)'],
+        cherry: ['var(--font-cherry)']
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -49,13 +54,25 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        }
+        },
+
+        card: "hsl(var(--card))",
+        hover: "hsl(var(--hover))",
+        buttons: "hsl(var(--buttons))",
+        primary: "hsl(var(--primary))",
+        footer: "hsl(var(--footer))",
+        "text-green-button": "hsl(var(--text-green-button))",
+        "primary-border": "hsl(var(--primary-border))",
+        "character-title": "hsl(var(--character-title))"
       },
       borderRadius: {
         xl: "calc(var(--radius) + 2px)",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      dropShadow: {
+        'active': '0px 0px 3px #519A2D'
       },
       keyframes: {
         "accordion-down": {
@@ -65,21 +82,9 @@ module.exports = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
-        },
-        "chevron-active": {
-          '0%': {transform: 'rotate(0deg)'},
-          '50%': {transform: 'rotate(-90deg)'},
-          '100%': {transform: 'rotate(-180deg)'}
-        },
-        "chevron-disabled": {
-          '0%': {transform: 'rotate(-180deg)'},
-          '50%': {transform: 'rotate(-90deg)'},
-          '100%': {transform: 'rotate(0deg)'}
-        },
+        }
       },
       animation: {
-        "chevron-active": "chevron-active 0.2s ease-out",
-        "chevron-disabled": "chevron-disabled 0.2s ease-out",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

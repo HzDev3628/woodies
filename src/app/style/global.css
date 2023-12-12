@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%; /*#0a0a0ab3*/
+    --background: 0 0% 4%;
     --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
@@ -34,6 +34,15 @@
     --ring: 240 10% 3.9%;
 
     --radius: 0.5rem;
+
+    --text-green-button: 0 0% 4%; /*#0A0A0A*/
+    --card: 0 0% 9%; /*#171717*/
+    --hover: 100 55% 39%; /*#519A2D*/
+    --buttons: 105 36% 41%; /*#55d42*/
+    --primary: 0 0% 60%; /*#999999*/
+    --footer: 0 0% 36%; /*#5C5C5C*/
+    --primary-border: 0 0% 45%; /*#737373*/
+    --character-title: 0 0% 80%; /*#CCCCCC*/
   }
 }
 

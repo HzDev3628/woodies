@@ -24,12 +24,16 @@ const VALUELINKS = [
 
 export const Footer = () => {
   return (
-    <footer className="flex h-[59px] items-center justify-between px-[75px]">
+    <footer className="flex h-[72px] items-center justify-between px-5 text-footer">
       <div className="flex flex-col justify-center">
-        <span className="text-xs font-normal leading-[8px]">Powered by</span>
-        <p className="font-cherry text-[35px] leading-[24px]">Woodies</p>
+        <span className="font-nunito text-xs font-normal leading-[8px]">
+          Powered by
+        </span>
+        <p className="font-cherry text-[35px] leading-[24px] text-footer">
+          Woodies
+        </p>
       </div>
-      <div className="text-xl font-medium leading-[14px]">
+      <div className="font-nunito text-base font-medium leading-[14px]">
         © 2023. All rights reserved
       </div>
       <div className="flex w-[134px] items-center justify-between">

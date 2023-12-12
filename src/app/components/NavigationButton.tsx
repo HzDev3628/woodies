@@ -44,9 +44,16 @@ export const NavigationButton = () => {
           key={index}
           disabled={disabled}
           onClick={() => setActivePage(0)}
-          className={`text-xl ${activePage == index ? 'text-white' : ''}`}
+          variant="ghost"
+          size="headerButton"
+          className={`relative text-base ${
+            activePage == index ? 'text-hover drop-shadow-active' : ''
+          }`}
         >
           <span className="leading-3">{label}</span>
+          {activePage == index && (
+            <div className="absolute bottom-0 h-px w-full bg-hover" />
+          )}
         </Button>
       ))}
     </>
