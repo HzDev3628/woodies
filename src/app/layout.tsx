@@ -3,8 +3,8 @@ import './style/global.css'
 import type { Metadata } from 'next'
 import { Cherry_Bomb_One, Montserrat, Nunito } from 'next/font/google'
 
-import { Footer } from './components/footer'
-import { Header } from './components/header'
+import { Footer } from './components/footer-one'
+import { Header } from './components/header-two'
 
 export const metadata: Metadata = {
   title: 'Woodies',
