@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import DiscordImage from '../../../public/footer/discord.svg'
-import WhitepaperImage from '../../../public/footer/paper.svg'
-import TwitterImage from '../../../public/footer/twitter_x.svg'
+import DiscordImage from './assets/discord.svg'
+import WhitepaperImage from './assets/paper.svg'
+import TwitterImage from './assets/twitter_x.svg'
 
 const VALUELINKS = [
   {
@@ -24,7 +24,7 @@ const VALUELINKS = [
 
 export const Footer = () => {
   return (
-    <footer className="flex h-[72px] items-center justify-between px-5 text-footer">
+    <footer className="relative z-10 flex h-[72px] items-center justify-between px-5 text-footer">
       <div className="flex flex-col justify-center">
         <span className="font-nunito text-xs font-normal leading-[8px]">
           Powered by

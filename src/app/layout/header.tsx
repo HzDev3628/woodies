@@ -1,11 +1,18 @@
 import Image from 'next/image'
 
 import logoWoodies from '../../../public/logo.png'
-import { NavigationButton } from './navigation-button'
+import { NavigationButton } from '../components/navigation-button'
 
 export const Header = () => {
   return (
-    <header className="flex h-[76px] w-full items-center px-5">
+    <header
+      className="fixed z-50 flex h-[76px] w-full items-center px-5"
+      style={{
+        background:
+          'linear-gradient(90deg, rgba(10, 10, 10, 0.90) 1.39%, rgba(10, 10, 10, 0.10) 50%, rgba(10, 10, 10, 0.90) 98.61%)',
+        backdropFilter: 'blur(12px)'
+      }}
+    >
       <Image
         className="rounded-full"
         src={logoWoodies}
