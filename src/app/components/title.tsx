@@ -2,7 +2,7 @@ export const Title = () => {
   return (
     <div className="relative z-30 flex w-full justify-center">
       <div
-        className="absolute -z-10 h-32 w-[700px] opacity-50"
+        className="absolute -z-10 h-32 w-[700px] opacity-40"
         style={{
           background:
             'radial-gradient(50% 50% at 50% 50%, #525252 0%, #0B0B0B 100%)'
