@@ -1,3 +1,5 @@
+import { H1Gradient } from '@/components/ui/text-gradient'
+
 export const Title = () => {
   return (
     <div className="relative z-30 flex w-full justify-center">
@@ -9,16 +11,7 @@ export const Title = () => {
         }}
       />
       <div className="z-30 flex flex-col items-center gap-7">
-        <h1
-          className="font-montserrat text-6xl"
-          style={{
-            background: 'linear-gradient(91deg, #CCC 7.61%, #78CF5B 103.96%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}
-        >
-          Meet the Woodies
-        </h1>
+        <H1Gradient>Meet the Woodies</H1Gradient>
         <p className="text-xl font-medium">
           Collection of 3333 NFTs created by mother nature
         </p>

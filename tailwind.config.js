@@ -61,7 +61,7 @@ module.exports = {
         buttons: "hsl(var(--buttons))",
         primary: "hsl(var(--primary))",
         footer: "hsl(var(--footer))",
-        "text-green-button": "hsl(var(--text-green-button))",
+        "green-button-text": "hsl(var(--text-green-button))",
         "primary-border": "hsl(var(--primary-border))",
         "character-title": "hsl(var(--character-title))"
       },
