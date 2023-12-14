@@ -1,26 +1,4 @@
-import Image from 'next/image'
-
-import DiscordImage from './assets/discord.svg'
-import WhitepaperImage from './assets/paper.svg'
-import TwitterImage from './assets/twitter_x.svg'
-
-const VALUELINKS = [
-  {
-    image: WhitepaperImage,
-    alt: 'Whitepaper',
-    href: '#'
-  },
-  {
-    image: TwitterImage,
-    alt: 'Twitter',
-    href: '#'
-  },
-  {
-    image: DiscordImage,
-    alt: 'Discord',
-    href: '#'
-  }
-]
+import { VALUELINKS } from '@/lib/constants'
 
 export const Footer = () => {
   return (
@@ -37,15 +15,9 @@ export const Footer = () => {
         © 2023. All rights reserved
       </div>
       <div className="flex w-[134px] items-center justify-between">
-        {VALUELINKS.map(({ image, alt, href }, index) => (
+        {VALUELINKS.map(({ ImageSVG, href }, index) => (
           <a key={index} href={href} target="_blank">
-            <Image
-              src={image}
-              width={25}
-              height={25}
-              alt={alt}
-              className="transition-all duration-200 hover:invert-[.70]"
-            />
+            <ImageSVG className="transition-all duration-200 hover:invert-[.70]" />
           </a>
         ))}
       </div>

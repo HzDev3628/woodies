@@ -3,29 +3,7 @@ import { useParams } from 'next/navigation'
 import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
-
-const BUTTONHEADER = [
-  {
-    label: 'Home',
-    href: '/',
-    disabled: false
-  },
-  {
-    label: 'Staking',
-    href: '/staking',
-    disabled: true
-  },
-  {
-    label: 'Wheelspins',
-    href: '/wheelspins',
-    disabled: true
-  },
-  {
-    label: 'Raid2Earn',
-    href: '/raid2earn',
-    disabled: true
-  }
-]
+import { BUTTONHEADER } from '@/lib/constants'
 
 export const NavigationButton = () => {
   const { pages } = useParams()
