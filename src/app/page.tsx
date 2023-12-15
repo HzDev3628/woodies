@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import HeroImage from '../../public/hero-images.png'
-import { Ecosystem, Title } from './sections/index'
+import { Ecosystem, Title, Tools } from './sections/index'
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
         />
       </div>
       <Ecosystem />
+      <Tools />
     </main>
   )
 }

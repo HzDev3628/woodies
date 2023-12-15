@@ -1,4 +1,4 @@
-import { VALUELINKS } from '@/lib/constants'
+import { VALUELINKS } from '../_constants'
 
 export const Footer = () => {
   return (

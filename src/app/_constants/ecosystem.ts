@@ -1,52 +1,10 @@
-import { Discord, Twitter, Whitepaper } from '@/app/layout/assets'
-
 import {
   IntroductionOne,
   IntroductionThree,
   IntroductionTwo
-} from '../app/sections/assets/index'
+} from '../sections/assets/index'
+import { DiscordURL } from './links'
 
-// Navigate button
-export const BUTTONHEADER = [
-  {
-    label: 'Home',
-    href: '/',
-    disabled: false
-  },
-  {
-    label: 'Staking',
-    href: '/staking',
-    disabled: true
-  },
-  {
-    label: 'Wheelspins',
-    href: '/wheelspins',
-    disabled: true
-  },
-  {
-    label: 'Raid2Earn',
-    href: '/raid2earn',
-    disabled: true
-  }
-]
-
-// Footer
-export const VALUELINKS = [
-  {
-    ImageSVG: Whitepaper,
-    href: 'https://woodies.gitbook.io'
-  },
-  {
-    ImageSVG: Twitter,
-    href: '#'
-  },
-  {
-    ImageSVG: Discord,
-    href: 'https://discord.gg/hGR8JsXp4n'
-  }
-]
-
-// Ecosystem
 export const ECOSYSTEM = {
   title: 'Explore our ecosystem',
   content: `Woodies is community driven collection of 3333 cute forest creatures
@@ -54,6 +12,7 @@ export const ECOSYSTEM = {
             and uniqueness to web3 space. Our ecosystem is based on art, community
             and utility.`,
   button: 'Join the movement',
+  buttonURL: DiscordURL,
   images: [
     {
       src: IntroductionOne,

@@ -2,7 +2,8 @@ import Image from 'next/image'
 
 import { Button } from '@/components/ui/button'
 import { H2Gradient } from '@/components/ui/text-gradient'
-import { ECOSYSTEM } from '@/lib/constants'
+
+import { ECOSYSTEM } from '../_constants'
 
 export const Ecosystem = () => {
   return (
@@ -10,7 +11,9 @@ export const Ecosystem = () => {
       <div className="flex w-[600px] flex-col gap-10">
         <H2Gradient>{ECOSYSTEM.title}</H2Gradient>
         <p>{ECOSYSTEM.content}</p>
-        <Button>{ECOSYSTEM.button}</Button>
+        <a href={ECOSYSTEM.buttonURL} target="_blank">
+          <Button>{ECOSYSTEM.button}</Button>
+        </a>
       </div>
       <div className="relative w-2/5">
         {ECOSYSTEM.images.map(({ src, style }, index) => (

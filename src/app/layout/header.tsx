@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import logoWoodies from '../../../public/logo.png'
-import { NavigationButton } from '../sections/components/navigation-button'
+import { NavigationButton } from './components/navigation-button'
 
 export const Header = () => {
   return (
@@ -21,7 +21,7 @@ export const Header = () => {
         alt="Logo"
       />
       <div className=" ml-[19px] flex w-full items-center justify-between text-xl">
-        <div className="flex w-[343px] items-center justify-between">
+        <div className="flex w-[363px] items-center justify-between rounded-xl bg-[#0A0A0A99] px-[10px]">
           <NavigationButton />
         </div>
       </div>

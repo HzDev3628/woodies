@@ -33,5 +33,5 @@ export const CardImageWood = ({ uri }: ImageProps) => {
 }
 
 export const CardContent = ({ children }: PropsCard) => {
-  return <div className="p-6">{children}</div>
+  return <div className="p-6 text-xl font-medium">{children}</div>
 }
