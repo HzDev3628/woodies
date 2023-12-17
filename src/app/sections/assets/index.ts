@@ -1,3 +1,7 @@
+export * as EnjoyArt_1 from './carousel/enjoy_art_1.png'
+export * as EnjoyArt_2 from './carousel/enjoy_art_2.png'
+export * as EnjoyArt_3 from './carousel/enjoy_art_3.png'
+export * as EnjoyArt_4 from './carousel/enjoy_art_4.png'
 export * as IntroductionOne from './ecosystem/introduction_1.png'
 export * as IntroductionTwo from './ecosystem/introduction_2.png'
 export * as IntroductionThree from './ecosystem/introduction_3.png'

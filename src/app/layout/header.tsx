@@ -8,8 +8,7 @@ export const Header = () => {
     <header
       className="fixed z-50 flex h-[76px] w-full items-center px-5"
       style={{
-        background:
-          'linear-gradient(90deg rgba(10, 10, 10, 0.10) 50%, rgba(10, 10, 10, 0.90) 98.61%)',
+        background: 'rgba(10, 10, 10, 0.60)',
         backdropFilter: 'blur(12px)'
       }}
     >

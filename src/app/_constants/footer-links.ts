@@ -1,4 +1,4 @@
-import { Discord, Twitter, Whitepaper } from '@/app/layout/assets'
+import { Discord, Twitter, Whitepaper } from '@/components/ui/icons'
 
 import { DiscordURL, TwitterURL, WhitepaperURL } from './links'
 

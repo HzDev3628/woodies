@@ -1,4 +1,4 @@
-import { VALUELINKS } from '../_constants'
+import { SVG_STYLE_HOVER, VALUELINKS } from '../_constants'
 
 export const Footer = () => {
   return (
@@ -11,13 +11,13 @@ export const Footer = () => {
           Woodies
         </p>
       </div>
-      <div className="font-nunito text-base font-medium leading-[14px]">
-        © 2023. All rights reserved
+      <div className="font-nunito text-base font-bold leading-[14px]">
+        © 2024. All rights reserved
       </div>
       <div className="flex w-[134px] items-center justify-between">
         {VALUELINKS.map(({ ImageSVG, href }, index) => (
           <a key={index} href={href} target="_blank">
-            <ImageSVG className="transition-all duration-200 hover:invert-[.70]" />
+            <ImageSVG className={SVG_STYLE_HOVER} />
           </a>
         ))}
       </div>
