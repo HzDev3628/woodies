@@ -8,9 +8,9 @@ import { ECOSYSTEM } from '../_constants'
 export const Ecosystem = () => {
   return (
     <div className="relative z-30 mb-[280px] mt-[260px] flex justify-between px-24">
-      <div className="relative flex w-[600px] flex-col gap-10">
+      <div className="relative flex w-[600px] flex-col gap-7">
         <H2Gradient>{ECOSYSTEM.title}</H2Gradient>
-        <p>{ECOSYSTEM.content}</p>
+        <p className="font-medium">{ECOSYSTEM.content}</p>
         <a href={ECOSYSTEM.buttonURL} target="_blank" className="w-max">
           <Button>{ECOSYSTEM.button}</Button>
         </a>

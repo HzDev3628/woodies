@@ -16,7 +16,7 @@ export const H1Gradient = ({ children }: { children: React.ReactNode }) => {
 export const H2Gradient = ({ children }: { children: React.ReactNode }) => {
   return (
     <h2
-      className="font-montserrat text-5xl font-extrabold"
+      className="font-montserrat text-5xl font-extrabold leading-tight"
       style={{
         background: 'linear-gradient(90deg, #CCC 7.61%, #78CF5B 103.96%)',
         WebkitBackgroundClip: 'text',

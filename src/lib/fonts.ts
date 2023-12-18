@@ -3,7 +3,6 @@ import { Cherry_Bomb_One, Montserrat, Nunito } from 'next/font/google'
 export const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['800'],
-  display: 'swap',
   style: 'normal',
   variable: '--font-montserrat'
 })

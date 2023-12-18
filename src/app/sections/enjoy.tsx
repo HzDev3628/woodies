@@ -8,7 +8,7 @@ import { WizardCarousel } from './components/wizaed-carousel'
 
 export const Enjoy = () => {
   return (
-    <div className="relative mb-[280px] flex w-full flex-col items-center">
+    <div className="relative mb-[300px] flex w-full flex-col items-center">
       <H2Gradient>{ENJOY_CAROUSEL.title}</H2Gradient>
       <Wizard>
         {ENJOY_CAROUSEL.carousel.map((value, index) => (
