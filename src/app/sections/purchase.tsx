@@ -12,7 +12,7 @@ export const Purchase = () => {
           <Image className={style} key={index} src={src} alt="" />
         ))}
       </div>
-      <div className="flex w-1/2 flex-col gap-5">
+      <div className="flex w-3/4 flex-col gap-5">
         <H2Gradient>{PURCHASE_DATA.title}</H2Gradient>
         <p className="w-1/2 font-medium">{PURCHASE_DATA.body}</p>
       </div>
