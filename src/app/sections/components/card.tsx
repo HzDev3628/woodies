@@ -28,6 +28,10 @@ export const CardImageFull = ({ uri }: ImageProps) => {
   )
 }
 
+export const CardText = ({ children }: PropsCard) => {
+  return <h3 className="text-4xl font-montserrat mt-auto">{children}</h3>
+}
+
 export const CardImageWood = ({ uri }: ImageProps) => {
   return <Image width={232} height={232} src={uri} alt="Content" />
 }

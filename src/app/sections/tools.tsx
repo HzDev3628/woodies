@@ -16,7 +16,7 @@ export const Tools = () => {
           </Card>
         ))}
       </div>
-      <a href={TOOLS.buttonURL} target="_blank">
+      <a href={TOOLS.buttonURL} target="_blank" rel="noreferrer">
         <Button>{TOOLS.buttonText}</Button>
       </a>
     </div>

@@ -7,10 +7,8 @@ import { DiscordURL } from './links'
 
 export const ECOSYSTEM = {
   title: 'Explore our ecosystem',
-  content: `Woodies is community driven collection of 3333 cute forest creatures
-            based on Solana Blockchain. We are focused on pushing more creativity
-            and uniqueness to web3 space. Our ecosystem is based on art, community
-            and utility.`,
+  content:
+    'Every Woodie that you see is unique. By minting Woodies you are buying a piece of smooth rare style. More than 130 traits, 3 characters, a couple of 1/1s made with love. Will you try your luck to mint the rarest one?',
   button: 'Join the movement',
   buttonURL: DiscordURL,
   images: [

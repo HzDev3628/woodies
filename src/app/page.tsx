@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import HeroImage from '../../public/hero_page_image.png'
+import { Characters } from './sections/characters'
 import { Ecosystem, Enjoy, Purchase, Title, Tools } from './sections/index'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Tools />
       <Enjoy />
       <Purchase />
+      <Characters />
     </main>
   )
 }
