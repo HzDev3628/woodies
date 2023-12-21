@@ -3,6 +3,7 @@ import Image from 'next/image'
 import HeroImage from '../../public/hero_page_image.png'
 import { Characters } from './sections/characters'
 import { Ecosystem, Enjoy, Purchase, Title, Tools } from './sections/index'
+import { PreFooter } from './sections/pre-footer'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Enjoy />
       <Purchase />
       <Characters />
+      <PreFooter />
     </main>
   )
 }

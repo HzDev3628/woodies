@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`text-primary ${nunito.className} ${nunito.variable} ${montserrat.variable} ${cherry.variable} antialiased`}
       >
-        <div className="absolute z-[1] h-full w-full backdrop-blur-2xl" />
+        <div className="absolute z-[1] h-full w-full backdrop-blur-3xl" />
         <Header />
         {children}
         <Footer />

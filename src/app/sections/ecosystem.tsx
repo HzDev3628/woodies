@@ -11,7 +11,12 @@ export const Ecosystem = () => {
       <div className="relative flex w-[600px] flex-col gap-7">
         <H2Gradient>{ECOSYSTEM.title}</H2Gradient>
         <p className="font-medium">{ECOSYSTEM.content}</p>
-        <a href={ECOSYSTEM.buttonURL} target="_blank" className="w-max">
+        <a
+          href={ECOSYSTEM.buttonURL}
+          target="_blank"
+          rel="noreferrer"
+          className="w-max"
+        >
           <Button>{ECOSYSTEM.button}</Button>
         </a>
       </div>
@@ -19,7 +24,7 @@ export const Ecosystem = () => {
         className="absolute -left-20 -top-16 -z-10 h-96 w-[700px] opacity-20"
         style={{
           background:
-            'radial-gradient(50% 50% at 50% 50%, #525252 0%, #0B0B0B 100%)'
+            'radial-gradient(50% 50% at 50% 50%, #525252 0%, #0B0B0B 100%)',
         }}
       />
       <div className="relative w-2/5">
