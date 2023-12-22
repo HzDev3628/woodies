@@ -10,13 +10,14 @@ import { Arrow } from '@/components/ui/icons'
 
 export const WizardCarousel = ({ items }: { items: string | StaticImport }) => {
   const STYLE = 'h-1 w-10 mr-5 rounded'
-  const { nextStep, previousStep, activeStep } = useWizard()
+  const { nextStep, previousStep, activeStep, goToStep } = useWizard()
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     anime({
       targets: '#image-animation',
       opacity: [0, 1],
-      duration: 6000
+      duration: 6000,
     })
   }, [activeStep])
 
@@ -31,7 +32,10 @@ export const WizardCarousel = ({ items }: { items: string | StaticImport }) => {
       <div className="mt-5 flex w-full items-center justify-center">
         <Arrow
           className={`mr-5 rotate-180 ${SVG_STYLE_HOVER}`}
-          onClick={() => previousStep()}
+          onClick={() => {
+            if (activeStep === 0) goToStep(3)
+            previousStep()
+          }}
         />
         <div
           className={`${
@@ -53,7 +57,13 @@ export const WizardCarousel = ({ items }: { items: string | StaticImport }) => {
             activeStep === 3 ? 'bg-buttons' : 'bg-primary'
           } ${STYLE}`}
         />
-        <Arrow onClick={() => nextStep()} className={SVG_STYLE_HOVER} />
+        <Arrow
+          onClick={() => {
+            if (activeStep === 3) goToStep(0)
+            nextStep()
+          }}
+          className={SVG_STYLE_HOVER}
+        />
       </div>
     </div>
   )

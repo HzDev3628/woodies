@@ -7,7 +7,7 @@ import { PreFooter } from './sections/pre-footer'
 
 export default function Home() {
   return (
-    <main className="relative flex h-max w-full flex-col justify-center pt-[100px]">
+    <main className="relative flex h-max w-full flex-col justify-center pt-[140px]">
       <Title />
       <div className="h-max w-full overflow-hidden">
         <Image

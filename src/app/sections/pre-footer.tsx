@@ -6,7 +6,7 @@ import Image from 'next/image'
 export const PreFooter = () => {
   return (
     <>
-      <div className="relative w-full flex flex-col items-center justify-center gap-10 overflow-hidden h-[800px]">
+      <div className="relative z-30 w-full flex flex-col items-center justify-center gap-10 overflow-hidden h-[800px]">
         <H2Gradient>{PRE_FOOTER_DATA.title}</H2Gradient>
         <a
           className="w-max"
@@ -22,7 +22,7 @@ export const PreFooter = () => {
       <Image
         src={PRE_FOOTER_DATA.img}
         alt=""
-        className="absolute left-0 right-0 bottom-14 -z-10"
+        className="absolute left-0 m-auto right-0 bottom-14 -z-10"
       />
     </>
   )

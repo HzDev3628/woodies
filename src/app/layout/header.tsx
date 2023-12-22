@@ -19,7 +19,7 @@ export const Header = () => {
         height={36}
         alt="Logo"
       />
-      <div className=" ml-[19px] flex w-full items-center justify-between text-xl">
+      <div className="ml-[19px] flex w-full items-center justify-between text-xl">
         <div className="flex w-[363px] items-center justify-between rounded-xl bg-[#0A0A0A99] px-[10px]">
           <NavigationButton />
         </div>
