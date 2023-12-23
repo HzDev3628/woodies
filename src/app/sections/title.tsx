@@ -4,7 +4,7 @@ export const Title = () => {
   return (
     <>
       <p
-        className="absolute -z-10 top-8 left-0 right-0 m-auto h-96 w-[1400px] opacity-20"
+        className="absolute -z-10 top-8 left-0 right-0 m-auto h-96 w-5/6 max-w-[1400px] opacity-20"
         style={{
           background:
             'radial-gradient(50% 50% at 50% 50%, #525252 0%, #0B0B0B 100%)',

@@ -22,7 +22,7 @@ export const PreFooter = () => {
       <Image
         src={PRE_FOOTER_DATA.img}
         alt=""
-        className="absolute left-0 m-auto right-0 bottom-14 -z-10"
+        className="absolute left-0 m-auto right-0 bottom-14 -z-10 opacity-20"
       />
     </>
   )
