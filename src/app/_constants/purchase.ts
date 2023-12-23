@@ -6,11 +6,13 @@ export const PURCHASE_DATA = {
   items: [
     {
       src: PurchaseIMG_1,
-      style: 'absolute -top-36 right-[275px] z-10'
+      style:
+        'w-[180px] h-[180px] xl:w-80 xl:h-80 absolute -top-10 right-24 xl:-top-36 xl:right-[275px] z-10 mr-10',
     },
     {
       src: PurchaseIMG_2,
-      style: 'absolute top-12 right-32 z-20'
-    }
-  ]
+      style:
+        'w-40 h-40 xl:w-72 xl:h-72 absolute right-0 top-16 xl:top-12 xl:right-32 z-20 mr-10',
+    },
+  ],
 }

@@ -8,9 +8,11 @@ import { ECOSYSTEM } from '../_constants'
 export const Ecosystem = () => {
   return (
     <div className="relative z-30 mb-[280px] mt-[260px] flex justify-between mx-auto w-11/12 max-w-[1500px] px-24">
-      <div className="relative flex w-[600px] flex-col gap-7">
+      <div className="relative flex w-[450px] xl:w-[600px] flex-col gap-7">
         <H2Gradient>{ECOSYSTEM.title}</H2Gradient>
-        <p className="font-medium">{ECOSYSTEM.content}</p>
+        <p className="font-medium text-base xl:text-xl">
+          {ECOSYSTEM.content}
+        </p>
         <a
           href={ECOSYSTEM.buttonURL}
           target="_blank"
@@ -27,7 +29,7 @@ export const Ecosystem = () => {
             'radial-gradient(50% 50% at 50% 50%, #525252 0%, #0B0B0B 100%)',
         }}
       />
-      <div className="relative w-2/5">
+      <div className="relative ml-5 xl:ml-0 w-64 xl:w-2/5">
         {ECOSYSTEM.images.map(({ src, style }, index) => (
           <Image key={index} src={src} className={style} alt="" />
         ))}

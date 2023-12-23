@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export const PreFooter = () => {
   return (
-    <>
+    <div className="w-full relative overflow-hidden">
       <div className="relative z-30 w-full flex flex-col items-center justify-center gap-10 overflow-hidden h-[800px]">
         <H2Gradient>{PRE_FOOTER_DATA.title}</H2Gradient>
         <a
@@ -22,8 +22,10 @@ export const PreFooter = () => {
       <Image
         src={PRE_FOOTER_DATA.img}
         alt=""
+        layout="fill"
+        objectFit="cover"
         className="absolute left-0 m-auto right-0 bottom-14 -z-10 opacity-20"
       />
-    </>
+    </div>
   )
 }
