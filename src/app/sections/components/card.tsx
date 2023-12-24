@@ -12,7 +12,7 @@ type ImageProps = {
 
 export const Card = ({ children }: PropsCard) => {
   return (
-    <article className="h-max w-80 xl:w-[410px] rounded-[20px] bg-card">
+    <article className="h-max w-80 mr-1 xl:w-[410px] rounded-[20px] bg-card">
       {children}
     </article>
   )

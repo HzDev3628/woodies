@@ -7,12 +7,12 @@ export const PURCHASE_DATA = {
     {
       src: PurchaseIMG_1,
       style:
-        'w-[180px] h-[180px] xl:w-80 xl:h-80 absolute -top-10 right-24 xl:-top-36 xl:right-[275px] z-10 mr-10',
+        'w-[100px] h-[100px] md:w-[180px] md:h-[180px] xl:w-80 xl:h-80 absolute right-0 mr-16 md:-top-10 md:right-24 xl:-top-36 xl:right-[275px] z-10 md:mr-10',
     },
     {
       src: PurchaseIMG_2,
       style:
-        'w-40 h-40 xl:w-72 xl:h-72 absolute right-0 top-16 xl:top-12 xl:right-32 z-20 mr-10',
+        'w-[93px] h-[93px] md:w-40 md:h-40 xl:w-72 xl:h-72 absolute right-0 top-16 md:top-16 xl:top-12 xl:right-32 z-20 mr-10',
     },
   ],
 }

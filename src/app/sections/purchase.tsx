@@ -6,7 +6,7 @@ import { PURCHASE_DATA } from '../_constants/purchase'
 
 export const Purchase = () => {
   return (
-    <div className="relative z-30 mb-[300px] max-w-[1500px] flex justify-center m-auto">
+    <div className="relative z-30 mb-52 lg:mb-[300px] max-w-[1500px] flex justify-center m-auto">
       <div className="relative w-1/2">
         {PURCHASE_DATA.items.map(({ src, style }, index) => (
           <Image className={style} key={index} src={src} alt="" />

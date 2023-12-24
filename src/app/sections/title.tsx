@@ -13,7 +13,7 @@ export const Title = () => {
       <div className="relative z-30 flex w-full justify-center">
         <div className="z-30 flex flex-col items-center gap-7">
           <H1Gradient>Meet the Woodies</H1Gradient>
-          <p className="text-xl font-medium">
+          <p className="text-sm sm:text-base lg:text-xl font-medium">
             Collection of 3333 NFTs created by mother nature
           </p>
         </div>
