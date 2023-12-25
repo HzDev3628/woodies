@@ -59,4 +59,14 @@
     font-weight: 600;
     color: #737373;
   }
+
+  ::-webkit-scrollbar {
+    background-color: #3333334d;
+    width: 14px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #73737386;
+    border-radius: 10px;
+  }
 }

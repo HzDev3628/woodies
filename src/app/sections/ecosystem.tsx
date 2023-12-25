@@ -8,7 +8,7 @@ import { ECOSYSTEM } from '../_constants'
 export const Ecosystem = () => {
   return (
     <div className="relative z-30 mb-52 lg:mb-[280px] mt-52 lg:mt-[260px] flex justify-between mx-auto w-11/12 max-w-[1500px] lg:px-24">
-      <div className="relative flex w-[450px] xl:w-[600px] flex-col gap-7">
+      <div className="relative flex w-[370px] xl:w-[600px] flex-col gap-7">
         <H2Gradient>{ECOSYSTEM.title}</H2Gradient>
         <p className="font-medium text-base xl:text-xl">
           {ECOSYSTEM.content}

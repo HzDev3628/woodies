@@ -5,7 +5,7 @@ import { NAVIGATION_BUTTONS } from '@/app/_constants'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-export const NavigationButton = () => {
+export const NavigationButtons = () => {
   const [activePage, setActivePage] = useState<string>()
   useEffect(() => {
     const localValueActivePage = localStorage.getItem('state')

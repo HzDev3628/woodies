@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import logoWoodies from '../../../public/logo.png'
-import { NavigationButton } from './components/navigation-button'
+import { NavigationButtons, DropdownMenu } from './components/index'
 
 export const Header = () => {
   return (
@@ -13,15 +13,18 @@ export const Header = () => {
       }}
     >
       <Image
-        className="rounded-full"
+        className="rounded-full hidden sm:inline"
         src={logoWoodies}
         width={36}
         height={36}
         alt="Logo"
       />
-      <div className="ml-[19px] flex w-full items-center justify-between text-xl">
-        <div className="flex w-[363px] items-center justify-between rounded-xl bg-[#0A0A0A99] px-[10px]">
-          <NavigationButton />
+      <div className="sm:ml-[19px] flex w-full items-center justify-between text-xl">
+        <div className="hidden sm:flex w-[363px] items-center justify-between rounded-xl bg-[#0A0A0A99] px-[10px]">
+          <NavigationButtons />
+        </div>
+        <div className="inline-flex sm:hidden">
+          <DropdownMenu />
         </div>
       </div>
     </header>

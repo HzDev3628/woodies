@@ -17,21 +17,24 @@ const buttonVariants = cva(
         secondary:
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'w-min',
-        link: 'text-primary underline-offset-4 hover:underline'
+        link: 'text-primary underline-offset-4 hover:underline',
+        active: 'text-xl font-bold bg-hover text-green-button-text',
+        disabled: 'text-primary text-xl font-bold',
       },
       size: {
         default: 'w-max h-10 px-4 py-2',
+        xl: 'py-1 px-2 w-max h-max',
         sm: 'h-9 rounded-md px-3',
         lg: 'h-11 rounded-md px-8',
         icon: 'h-10 w-10',
-        headerButton: 'py-[10px]'
-      }
+        headerButton: 'py-[10px]',
+      },
     },
     defaultVariants: {
       variant: 'default',
-      size: 'default'
-    }
-  }
+      size: 'default',
+    },
+  },
 )
 
 export interface ButtonProps
