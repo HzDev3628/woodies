@@ -20,6 +20,7 @@ const buttonVariants = cva(
         link: 'text-primary underline-offset-4 hover:underline',
         active: 'text-xl font-bold bg-hover text-green-button-text',
         disabled: 'text-primary text-xl font-bold',
+        menu: 'bg-none'
       },
       size: {
         default: 'w-max h-10 px-4 py-2',
@@ -27,6 +28,7 @@ const buttonVariants = cva(
         sm: 'h-9 rounded-md px-3',
         lg: 'h-11 rounded-md px-8',
         icon: 'h-10 w-10',
+        menu: 'p-0',
         headerButton: 'py-[10px]',
       },
     },

@@ -6,12 +6,13 @@ import {
   DropdownMenu as DropdownMenuShadcn,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { AlignJustify } from '@/components/ui/icons'
+import { Menu, Close } from '@/components/ui/icons'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 export const DropdownMenu = () => {
   const [activePage, setActivePage] = useState<string>()
+  const [isOpen, setIsOpen] = useState(false)
   useEffect(() => {
     const localValueActivePage = localStorage.getItem('state')
     if (localValueActivePage) {
@@ -20,12 +21,17 @@ export const DropdownMenu = () => {
   }, [])
 
   return (
-    <DropdownMenuShadcn>
-      <DropdownMenuTrigger>
-        <AlignJustify className="w-8 h-8" />
+    <DropdownMenuShadcn onOpenChange={() => setIsOpen((prev) => !prev)}>
+      <DropdownMenuTrigger
+        asChild
+        style={{
+          outline: 'none',
+        }}
+      >
+        <Button variant="menu" size="menu">{isOpen ? <Close className="w-6 h-6 ml-1" /> : <Menu className="w-8 h-8" />}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="flex flex-col w-52 h-[270px] backdrop-blur-md z-50 border-none pl-8 pt-10 gap-5"
+        className="flex flex-col w-52 h-[270px] mt-5 backdrop-blur-md rounded-none rounded-br-xl z-50 border-none pl-8 pt-10 gap-5"
         style={{
           background:
             'linear-gradient(90deg, rgba(10, 10, 10, 0.90) 1.39%, rgba(10, 10, 10, 0.10) 50%, rgba(10, 10, 10, 0.90) 98.61%)',

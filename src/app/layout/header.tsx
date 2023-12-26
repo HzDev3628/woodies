@@ -9,7 +9,7 @@ export const Header = () => {
       className="fixed z-50 flex h-[76px] w-full items-center px-5"
       style={{
         background: 'rgba(10, 10, 10, 0.60)',
-        backdropFilter: 'blur(12px)'
+        backdropFilter: 'blur(12px)',
       }}
     >
       <Image
