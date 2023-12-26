@@ -31,7 +31,7 @@ export const WizardCarousel = ({ items }: { items: string | StaticImport }) => {
       />
       <div className="mt-5 flex w-full items-center justify-center">
         <Arrow
-          className={`mr-5 rotate-180 ${SVG_STYLE_HOVER}`}
+          className={`mr-5 rotate-180 ${SVG_STYLE_HOVER} cursor-pointer`}
           onClick={() => {
             if (activeStep === 0) goToStep(3)
             previousStep()
@@ -62,7 +62,7 @@ export const WizardCarousel = ({ items }: { items: string | StaticImport }) => {
             if (activeStep === 3) goToStep(0)
             nextStep()
           }}
-          className={SVG_STYLE_HOVER}
+          className={`${SVG_STYLE_HOVER} cursor-pointer`}
         />
       </div>
     </div>
