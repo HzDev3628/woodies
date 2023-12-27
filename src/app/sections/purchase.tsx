@@ -6,7 +6,7 @@ import { PURCHASE_DATA } from '../_constants/purchase'
 
 export const Purchase = () => {
   return (
-    <div className="relative z-30 mb-52 lg:mb-[300px] max-w-[1500px] flex flex-col sm:flex-row gap-10 sm:gap-0 justify-center m-auto">
+    <div className="relative z-30 mb-52 lg:mb-[300px] max-w-[1500px] flex flex-col sm:flex-row gap-5 sm:gap-0 justify-center m-auto">
       <span className="max-sm:flex hidden m-auto">
         <H2Gradient>{PURCHASE_DATA.title}</H2Gradient>
       </span>

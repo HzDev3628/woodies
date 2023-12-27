@@ -13,3 +13,6 @@ export * as PurchaseIMG_2 from './purchase/purchase_your_woodie_2.png'
 export * as Earn from './tool/earn.png'
 export * as Gamble from './tool/gamble.png'
 export * as Raid from './tool/raid.png'
+export * as DiscordCover from './cover/discord_cover.png'
+export * as HeroImageCover from './cover/hero_page_image.png'
+

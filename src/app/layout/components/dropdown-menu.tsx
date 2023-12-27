@@ -24,9 +24,6 @@ export const DropdownMenu = () => {
     <DropdownMenuShadcn onOpenChange={() => setIsOpen((prev) => !prev)}>
       <DropdownMenuTrigger
         asChild
-        style={{
-          outline: 'none',
-        }}
       >
         <Button variant="menu" size="menu">{isOpen ? <Close className="w-6 h-6 ml-1" /> : <Menu className="w-8 h-8" />}</Button>
       </DropdownMenuTrigger>

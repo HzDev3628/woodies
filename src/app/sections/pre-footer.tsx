@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 export const PreFooter = () => {
   return (
-    <div className="w-full relative overflow-hidden">
-      <div className="relative z-30 w-full flex flex-col items-center justify-center gap-10 overflow-hidden h-[800px]">
+    <div className="w-full h-96 sm:h-[611px] max-sm:mb-16 max-sm:mt-28 relative overflow-hidden">
+      <div className="relative z-30 w-full flex flex-col items-center justify-center gap-10 overflow-hidden h-96 sm:h-[611px]">
         <H2Gradient>{PRE_FOOTER_DATA.title}</H2Gradient>
         <a
           className="w-max"

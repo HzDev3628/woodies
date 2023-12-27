@@ -21,7 +21,7 @@ export const Footer = () => {
       <div className="hidden sm:inline font-nunito text-base font-bold leading-[14px]">
         © 2024. All rights reserved
       </div>
-      <div className="flex w-full px-12 sm:px-0 sm:w-[134px] items-center justify-between">
+      <div className="flex w-full max-[400px]:px-2 px-8 sm:px-0 sm:w-[134px] items-center justify-between">
         {VALUELINKS.map(({ ImageSVG, href, title }, index) => (
           <a key={index} href={href} target="_blank" rel="noreferrer" className="flex flex-col items-center">
             <ImageSVG className={SVG_STYLE_HOVER} />

@@ -1,5 +1,5 @@
 import { DiscordURL } from './links'
-import DiscordCover from '../../../public/discord_cover.png'
+import { DiscordCover } from '../sections/assets'
 
 export const PRE_FOOTER_DATA = {
   title: 'Become a true Woodie',

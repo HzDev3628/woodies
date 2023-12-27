@@ -19,16 +19,16 @@ export const Card = ({ children }: PropsCard) => {
 }
 
 export const CardHeaderWood = ({ children }: PropsCard) => {
-  return <div className="grid grid-cols-2 p-3 xl:pl-6">{children}</div>
+  return <div className="flex justify-between px-3 pt-3 xl:pl-6">{children}</div>
 }
 
 export const CardImageFull = ({ uri }: ImageProps) => {
-  return <Image src={uri} className="w-full h-40 xl:h-[220px]" alt="Content" />
+  return <Image src={uri} className="w-full h-[165px] xl:h-[220px]" alt="Content" />
 }
 
 export const CardText = ({ children }: PropsCard) => {
   return (
-    <h3 className="text-3xl xl:text-4xl font-montserrat mt-auto">{children}</h3>
+    <h3 className="text-3xl xl:text-4xl font-montserrat mt-auto w-max">{children}</h3>
   )
 }
 

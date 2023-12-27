@@ -7,7 +7,7 @@ import { ECOSYSTEM } from '../_constants'
 
 export const Ecosystem = () => {
   return (
-    <div className="relative z-30 mb-52 lg:mb-[280px] mt-52 lg:mt-[260px] flex flex-col sm:flex-row gap-10 sm:gap-0 mx-auto w-11/12 max-w-[1500px] lg:px-24">
+    <div className="relative z-30 mb-52 lg:mb-[280px] mt-52 lg:mt-[260px] flex flex-col sm:flex-row gap-5 sm:gap-0 mx-auto w-11/12 max-w-[1500px] lg:px-24">
       <span className="max-sm:flex hidden">
         <H2Gradient>{ECOSYSTEM.title}</H2Gradient>
       </span>
