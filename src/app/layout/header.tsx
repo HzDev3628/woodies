@@ -10,6 +10,7 @@ export const Header = () => {
       style={{
         background: 'rgba(10, 10, 10, 0.60)',
         backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)'
       }}
     >
       <Image
