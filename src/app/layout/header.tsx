@@ -21,7 +21,7 @@ export const Header = () => {
         alt="Logo"
       />
       <div className="sm:ml-[19px] flex w-full items-center justify-between text-xl">
-        <div className="hidden sm:flex w-[363px] items-center justify-between rounded-xl bg-[#0A0A0A99] px-[10px]">
+        <div className="hidden sm:flex w-[263px] items-center justify-between rounded-xl bg-[#0A0A0A99] px-[10px]">
           <NavigationButtons />
         </div>
         <div className="inline-flex sm:hidden">

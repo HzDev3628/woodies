@@ -2,7 +2,6 @@ import {
   HomeIcon,
   LeafIcon,
   WheelspinsIcon,
-  MoneyIcon,
 } from '@/components/ui/icons'
 
 export const DROPDOWN_MENU = [
@@ -20,10 +19,5 @@ export const DROPDOWN_MENU = [
     title: 'Wheelspins',
     href: '/wheelspins',
     Icon: WheelspinsIcon,
-  },
-  {
-    title: 'Raid2Earn',
-    href: '/raid2earn',
-    Icon: MoneyIcon,
-  },
+  }
 ]

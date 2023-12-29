@@ -11,8 +11,4 @@ export const NAVIGATION_BUTTONS = [
     label: 'Wheelspins',
     href: '/wheelspins',
   },
-  {
-    label: 'Raid2Earn',
-    href: '/raid2earn',
-  }
 ]
