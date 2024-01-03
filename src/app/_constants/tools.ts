@@ -2,7 +2,7 @@ import { Earn, Gamble, Raid } from '../sections/assets'
 import { WhitepaperURL } from './links'
 
 export const TOOLS = {
-  title: 'Trade',
+  title: 'Earn, gamble & trade',
   buttonText: 'Read whitepaper',
   buttonURL: WhitepaperURL,
   card: [
